@@ -23,47 +23,55 @@
       otherData.addColumn('string', 'Dependencies');
 
       otherData.addRows([
-        ['task1', 'Primary interview & surveys', 'initiation', new Date(2020, 9, 22), null, daysToMilliseconds(2), 100, null],
-        ['task2', 'Market analysis', 'initiation', new Date(2020, 9, 22), null, daysToMilliseconds(3), 100, null],
-        ['task3', 'Generate specification', 'initiation', new Date(2020, 9, 25), null, daysToMilliseconds(2), 100, 'task1,task2'],
-        ['task4', 'Mission statement', 'initiation', new Date(2020, 9, 27), null, daysToMilliseconds(1), 100, 'task1,task2'],
+        ['task1', 'Primary interview & surveys', 'initiation', null, null, daysToMilliseconds(2), 100, null],
+        ['task2', 'Market analysis', 'initiation', null, null, daysToMilliseconds(3), 100, null],
+        ['task3', 'Generate specification', 'initiation', null, null, daysToMilliseconds(2), 100, 'task1,task2'],
+        ['task4', 'Mission statement', 'initiation', null, null, daysToMilliseconds(1), 100, 'task1,task2'],
 
-        ['task5', 'Metrics Table', 'planning', new Date(2020, 9, 28), null, daysToMilliseconds(1), 100, 'task3,task4'],
-        ['task6', 'Benchmark on customer needs', 'planning', new Date(2020, 9, 29), null, daysToMilliseconds(2), 100, 'task5'],
-        ['task7', 'Benchmark on metrics', 'planning', new Date(2020, 9, 29), null, daysToMilliseconds(2), 100, 'task5'],
-        ['task8', 'Concept generation', 'planning', new Date(2020, 9, 31), null, daysToMilliseconds(4), 100, 'task3'],
-        ['task9', 'Concept screening', 'planning', new Date(2020, 10, 4), null, daysToMilliseconds(3), 0, 'task8'],
-        ['task10', 'Concept testing', 'planning', new Date(2020, 10, 7), null, daysToMilliseconds(4), 0, 'task9'],
-        ['task11', 'Concept selection', 'planning', new Date(2020, 10, 11), null, daysToMilliseconds(3), 0, 'task10'],
-        ['task12', 'Product specification', 'planning', new Date(2020, 10, 14), null, daysToMilliseconds(7), 0, 'task11'],
-        ['task13', 'Product planning', 'planning', new Date(2020, 10, 21), null, daysToMilliseconds(4), 0, 'task11'],
-        ['task14', 'Product architecture design', 'planning', new Date(2020, 10, 25), null, daysToMilliseconds(10), 0, 'task13'],
-        ['task15', 'Product detailed design', 'planning', new Date(2020, 11, 5), null, daysToMilliseconds(10), 0, 'task14'],
+        ['task5', 'Metrics Table', 'planning', null, null, daysToMilliseconds(1), 100, 'task3,task4'],
+        ['task6', 'Benchmark on customer needs', 'planning', null, null, daysToMilliseconds(2), 100, 'task5'],
+        ['task7', 'Benchmark on metrics', 'planning', null, null, daysToMilliseconds(2), 100, 'task5'],
+        ['task8', 'Concept generation', 'planning', null, null, daysToMilliseconds(4), 100, 'task3'],
+        ['task9', 'Concept screening', 'planning', null, null, daysToMilliseconds(3), 0, 'task8'],
+        ['task10', 'Concept testing', 'planning', null, null, daysToMilliseconds(4), 0, 'task9'],
+        ['task11', 'Concept selection', 'planning', null, null, daysToMilliseconds(3), 0, 'task10'],
+        ['task12', 'Product specification', 'planning', null, null, daysToMilliseconds(7), 0, 'task11'],
+        ['task13', 'Product planning', 'planning', null, null, daysToMilliseconds(4), 0, 'task11'],
+        ['task14', 'Product architecture design', 'planning', null, null, daysToMilliseconds(10), 0, 'task13'],
+        ['task15', 'Product detailed design', 'planning', null, null, daysToMilliseconds(10), 0, 'task14'],
 
 
-        ['task16', 'Prototyping', 'implementation', new Date(2020, 11, 15), null, daysToMilliseconds(6), 0, 'task15'],
-        ['task17', 'Prototype testing', 'implementation', new Date(2020, 11, 21), null, daysToMilliseconds(3), 0, 'task16'],
-        ['task18', 'Prototype debugging', 'implementation', new Date(2020, 11, 23), null, daysToMilliseconds(2), 0, 'task17'],
-        ['task19', 'Prototype production', 'implementation', new Date(2020, 11, 25), null, daysToMilliseconds(5), 0, 'task18'],
-        ['task20', 'Prototype improvements', 'implementation', new Date(2020, 11, 30), null, daysToMilliseconds(5), 0, 'task19'],
-        ['task21', 'Product finalisation', 'implementation', new Date(2021, 0, 4), null, daysToMilliseconds(3), 0, 'task20'],
-        ['task22', 'Quality testing', 'implementation', new Date(2021, 0, 7), null, daysToMilliseconds(2), 0, 'task21'],
-        ['task23', 'Manufacturing', 'implementation', new Date(2021, 0, 9), null, daysToMilliseconds(5), 0, 'task22'],
-        ['task24', 'Branding', 'implementation', new Date(2021, 0, 14), null, daysToMilliseconds(2), 0, 'task23'],
-        ['task25', 'Brochure design', 'implementation', new Date(2021, 0, 16), null, daysToMilliseconds(3), 0, 'task23,task24'],
-        ['task26', 'Brochure printing', 'implementation', new Date(2021, 0, 19), null, daysToMilliseconds(2), 0, 'task25'],
-        ['task27', 'Marketing', 'implementation', new Date(2021, 0, 16), null, daysToMilliseconds(30), 0, 'task23'],
-        ['task28', 'Publicising', 'implementation', new Date(2021, 0, 16), null, daysToMilliseconds(30), 0, 'task23'],
-        ['task29', 'Product website development', 'implementation', new Date(2021, 1, 15), null, daysToMilliseconds(7), 100, 'task23'],
-        ['task30', 'Advertising', 'implementation', new Date(2021, 1, 22), null, daysToMilliseconds(10), 0, 'task23'],
+        ['task16', 'Prototyping', 'implementation', null, null, daysToMilliseconds(6), 0, 'task15'],
+        ['task17', 'Prototype testing', 'implementation', null, null, daysToMilliseconds(3), 0, 'task16'],
+        ['task18', 'Prototype debugging', 'implementation', null, null, daysToMilliseconds(2), 0, 'task17'],
+        ['task19', 'Prototype production', 'implementation', null, null, daysToMilliseconds(5), 0, 'task18'],
+        ['task20', 'Prototype improvements', 'implementation', null, null, daysToMilliseconds(5), 0, 'task19'],
+        ['task21', 'Product finalisation', 'implementation', null, null, daysToMilliseconds(3), 0, 'task20'],
+        ['task22', 'Quality testing', 'implementation', null, null, daysToMilliseconds(2), 0, 'task21'],
+        ['task23', 'Manufacturing', 'implementation', null, null, daysToMilliseconds(5), 0, 'task22'],
+        ['task24', 'Branding', 'implementation', null, null, daysToMilliseconds(2), 0, 'task23'],
+        ['task25', 'Brochure design', 'implementation', null, null, daysToMilliseconds(3), 0, 'task23,task24'],
+        ['task26', 'Brochure printing', 'implementation', null, null, daysToMilliseconds(2), 0, 'task25'],
+        ['task27', 'Marketing', 'implementation', null, null, daysToMilliseconds(30), 0, 'task23'],
+        ['task28', 'Publicising', 'implementation', null, null, daysToMilliseconds(30), 0, 'task23'],
+        ['task29', 'Product website development', 'implementation', null, null, daysToMilliseconds(7), 100, 'task23'],
+        ['task30', 'Advertising', 'implementation', null, null, daysToMilliseconds(10), 0, 'task23'],
 
-        ['task31', 'Product launching', 'closing', new Date(2021, 2, 4), null, daysToMilliseconds(3), 0, 'task23'],
+        ['task31', 'Product launching', 'closing', null, null, daysToMilliseconds(3), 0, 'task23'],
       ]);
 
       var options = {
-        height: 3840,
-        width: 2160,
+        height: 7680,
+        width: 4320,
+        criticalPathEnabled: true,
+
+        criticalPathStyle: {
+          stroke: '#ee3031',
+          strokeWidth: 5
+        },
+
         gantt: {
+          sortTasks: false,
           labelStyle: {
             fontName: 'Helvetica',
             fontSize: 14
