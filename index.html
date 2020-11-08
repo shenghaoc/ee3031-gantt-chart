@@ -46,17 +46,18 @@
         ['task19', 'Prototype production', null, null, daysToMilliseconds(5), 0, 'task18'],
         ['task20', 'Prototype improvements', null, null, daysToMilliseconds(5), 0, 'task19'],
         ['task21', 'Product finalisation', null, null, daysToMilliseconds(3), 0, 'task20'],
-        ['task22', 'Quality testing', null, null, daysToMilliseconds(2), 0, 'task21'],
+        // Not on critical path, fix start
+        ['task22', 'Quality testing', new Date(2020, 11, 16), null, daysToMilliseconds(2), 0, 'task15'],
         ['task23', 'Manufacturing', null, null, daysToMilliseconds(5), 0, 'task22'],
         ['task24', 'Branding', null, null, daysToMilliseconds(2), 0, 'task23'],
-        ['task25', 'Brochure design', null, null, daysToMilliseconds(3), 0, 'task23,task24'],
+        ['task25', 'Brochure design', null, null, daysToMilliseconds(3), 0, 'task15'],
         ['task26', 'Brochure printing', null, null, daysToMilliseconds(2), 0, 'task25'],
-        ['task27', 'Marketing', null, null, daysToMilliseconds(30), 0, 'task24'],
-        ['task28', 'Publicising', null, null, daysToMilliseconds(30), 0, 'task24'],
-        ['task29', 'Product website development', null, null, daysToMilliseconds(7), 0, 'task28'],
-        ['task30', 'Advertising', null, null, daysToMilliseconds(10), 0, 'task29'],
+        ['task27', 'Marketing', null, null, daysToMilliseconds(30), 0, 'task21'],
+        ['task28', 'Publicising', null, null, daysToMilliseconds(30), 0, 'task21'],
+        ['task29', 'Product website development', null, null, daysToMilliseconds(7), 0, 'task21'],
+        ['task30', 'Advertising', null, null, daysToMilliseconds(10), 0, 'task21'],
 
-        ['task31', 'Product launching', null, null, daysToMilliseconds(3), 0, 'task30'],
+        ['task31', 'Product launching', null, null, daysToMilliseconds(3), 0, 'task21,task27,task28'],
       ]);
 
       var options = {
